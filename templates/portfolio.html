@@ -1,0 +1,61 @@
+{% extends "index.html"%}
+{% load static %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<div>
+    
+    <div class="card" style="margin-top:55px ;text-align:center">
+        <h1><span class="badge badge-pill badge-warning">Project</h1>
+    <div>
+    <br>
+    <div class="main-container">
+        <div class="row" style="margin-left:50px; margin-right:50px">
+        
+        <div class="card-group">
+            {% for project in projects %}
+    		<div class="col-md-4">
+    			<div class="card">
+    				<img class="thumbnail" src="{{project.thumbnil.url}}">
+    				<div class="card-body">
+        				<h6 class="card-title">{{project.headline}}</h6>
+        				<p class="card-intro">{{project.sub_headline}}</p>
+        				<a href="{% url 'project' project.id %}">Read More</a>
+        			</div>
+        		</div>
+        	</div>
+        	{% endfor %}
+    	</div>
+    	
+    	</div>
+    </div>
+    
+    <div class="card" style="text-align:center">
+        <br>
+        <h1><span class="badge badge-pill badge-warning">Achievements</span></h1>
+    <div>
+    <br>
+    <div class="main-container">
+        <div class="row" style="margin-left:50px; margin-right:50px">
+        
+        <div class="card-group">
+            {% for achievement in achievements %}
+    		<div class="col-md-4">
+        		<div class="card">
+    				<img class="thumbnail" src="{{achievement.thumbnil.url}}">
+    				<div class="card-body">
+    					<h6 class="card-title">{{achievement.headline}}</h6>
+    					<p class="card-intro">{{achievement.sub_headline}}</p>
+    					<a href="{% url 'achievement' achievement.id %}">Read More</a>
+        			</div>
+    			</div>
+    		</div>
+            {% endfor %}
+    	</div>
+    	</div>
+    </div>
+
+
+<div>
+{% endblock %}

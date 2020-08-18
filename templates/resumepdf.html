@@ -1,0 +1,11 @@
+{% extends "index.html"%}
+{% load static %}
+
+{% block title %}Resume PDF{% endblock %}
+
+{% block content %}
+<div>
+    <embed src="{% static 'JEYASURIYA_M_gresume.pdf' %}" type="application/pdf" width="100%" height="100%" />
+</div>
+
+{% endblock %}

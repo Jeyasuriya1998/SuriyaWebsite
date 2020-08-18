@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block content %}
+<div class="post-wapper" style="margin-top:5rem">
+    <div class="post">
+        <h1>Thanks for reaching out</h1>
+        <p>Your message was successfully sent. I will do my best to get back to you a
+        timely manner:)</p>
+        <a class="btn btn-success" href="{% url 'welcome' %}"><span style="font-size:13px">BACK TO HOME</span></a>
+    </div>
+</div>
+
+{% endblock%}

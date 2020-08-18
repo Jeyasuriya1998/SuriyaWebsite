@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+
+<div class="main-container" style="margin:4rem auto;">
+    <div class="row" style="margin: 0 auto">
+    
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="thumbnill" src="{% static 'formal resume.png' %}" >
+                <div class="card-body">
+                    <center><h2><span class="card-title">Formal Resume</h2>
+                    <a href="{% url 'formal_resume' %}" target="_self" 
+                    class="btn btn-primary">view</a></center>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="thumbnill" src="{% static 'online resume.png' %}" >
+                <div class="card-body">
+                    <center><h2><span class="card-title">Smart Resume</h2>
+                    <a href="{% url 'smart_resume' %}" target="_self" width="50%"
+                    class="btn btn-primary">view</a></center>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+        
+</div>
+
+{% endblock %}

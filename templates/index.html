@@ -1,0 +1,154 @@
+<style>
+    @viewport{
+        zoom: 1.0;
+        width: extend-to-zoom;
+        }
+        
+    @-ms-viewport{
+        width: extend-to-zoom;
+        zoom: 1.0;
+        }
+</style>
+<html>
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+        <title>{% block title %}Suriya{% endblock %}</title>
+        <style>
+            space{
+                display: inline-block;
+                margin-left : 20px;
+                }
+            tab{
+                display: inline-block;
+                margin-left : 80px;
+            }
+            tab2{
+                display: inline-block;
+                margin-left : 200px
+                }
+            .table{
+    			border: 1px solid black;
+    			border-collapse: collapse;
+    			cellspacing: 2px;
+    			}
+    		.vertical-line{
+        		width: 1px;
+        		height: 500px;
+        		background: silver;
+        		}
+        </style>
+    </head>
+    <body style="background: aliceblue">
+        <div class="row">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-yellow bg-light fixed-top"> <!--fixed top is used to fix the title when scroll-->
+                    <a class="navbar-brand" href="{% url 'start' %}">Suriya's Website <tab2></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                         <a class="nav-link" href="{% url 'welcome' %}">Welcome<tab></a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="{% url 'profile' %}">Profile<tab></a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="{% url 'resume' %}">Resume<tab></a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="{% url 'portfolio' %}">Portfolio<tab></a>
+                      </li>
+                      
+                      <li class="nav-item">
+                         <a class="nav-link" href="{% url 'contact' %}">Contact<tab></a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>       
+        </div>
+    
+        {% block content %}  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3.5" style="margin-top:3.5rem">
+                    {% load static %}
+                    <img src="{% static 'suriya.jpeg' %}" width=300px class="image-fluid" alt="suriya's photo">
+                    
+                </div>
+                
+
+                <div class="col-md-8" style="margin-top:5rem">
+                    <div class="card border-info mb-3" style="max-width:100rem">
+                        <div class="card-header"><h1 style="font-size:40px"><b> Hello, I'm Jeyasuriya</b></h1></div>  				
+        					<div class="card-body text-info">
+            					<p class="card-text" style="font-size:25;margin-left:50px; margin-right:50px">Thanks for visiting my website. This is my personal website. 
+            					On this website, you can see my complete details. I'm a 22 years old boy. 
+            					I'm the freshly Engineered Graduate in the stream of Electonic and 
+            					Communication Engineering</p>
+            				</div>
+    				</div>
+    				<p><a href="https://www.instagram.com/suriyajeyasuriya/" target="_blank"><img width="30" src="{% static 'instagram.jpg' %}" /></a>
+    					<space><a href="https://mail.google.com/mail/suriyajeyasuriya123@gmail.com" target="_blank"><img width="30" src="{% static 'gmail.png' %}" /></a>
+    					<space><a href="https://www.linkedin.com/in/jeyasuriya-m-4a3a861b1/" target="_blank"><img width="30" src="{% static 'linkedin.png' %}" /></a>
+     					<space><a href="https://github.com/Jeyasuriya1998" target="_blank"><img width="40" src="{% static 'github.png' %}" /></a>
+     					<space><a href="https://twitter.com/Jeyasur61591515" target="_blank"><img width="40" src="{% static 'twitter.png' %}" /></a>
+     					<tab2><img src="{% static 'Surya signature.jpg' %}" width="150" height="100"/>
+ 					</p>
+					
+					
+					
+ 					<br>
+    			</div>
+            </div>
+        </div>
+        <footer class="fixed-bottom navbar-light" style="background:lightcyan; color:black;">
+        <div class="container-fluid">
+            <div class= "row">
+                <div class="col-md-6" style="margin-bottom:1rem">
+                    <table>
+                        <tr>
+                            <td style="font-size:20px">Email<tab></td>
+                            <td style="font-size:20px">suriyajeyasuriya123@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:20px">Mobile<tab></td>
+                            <td style="font-size:20px">+91 63743 63117</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:20px">Date of Birth<tab></td>
+                            <td style="font-size:20px">13/01/1998</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6" style="margin-bottom:2rem">
+          
+                    <table>
+                        <tr>
+                            <td style="font-size:20px">Address<tab></td>
+                            <td style="font-size:20px">Madurai, Tamil Nadu, India</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:20px">Gender<tab></td>
+                            <td style="font-size:20px">Male</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:20px">Languages<tab></td>
+                            <td style="font-size:20px">English, Tamil</td>
+                        </tr>
+                    </table>
+                
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>

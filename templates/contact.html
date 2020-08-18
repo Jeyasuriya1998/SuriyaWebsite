@@ -1,0 +1,91 @@
+{% extends "index.html"%}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<div>
+    <div class="main-container"style="margin:3rem">
+        <div class="card" >
+            <h1 style="text-align:center;text-decoration-color: lightpink; background-color:red">Contact Details</h1>
+        </div>
+        <br>
+        <div class="col-md-8" style="margin-left:250px;">
+            <div  class="card">
+                <table style="font-size:30px">
+                    <tr>
+                        <td class="badge badge-info">Name</td>
+                        <td>:</td>
+                        <td class="badge badge-success">Jeyasuriya M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="badge badge-info">D.O.B</td>
+                        <td>:</td>
+                        <td class="badge badge-success">13/01/1998</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Age</td>
+                        <td>:</td>
+                        <td class="badge badge-success">21</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Qualification</td>
+                        <td>:</td>
+                        <td class="badge badge-success">Bachelor of Engineering</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Email</td>
+                        <td>:</td>
+                        <td class="badge badge-success">suriyajeyasuriya123@gamil.com</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Collage</td>
+                        <td>:</td>
+                        <td class="badge badge-success">Sethu Institute of technology</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">School</td>
+                        <td>:</td>
+                        <td class="badge badge-success">Rajan Matriculation School</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Skills</td>
+                        <td>:</td>
+                        <td><span class="badge badge-pill badge-warning">Python</span>
+                            <span class="badge badge-pill badge-dark">Django</span>
+                            <span class="badge badge-pill badge-danger">Machine Learning</span>
+                            <span class="badge badge-pill badge-info">C Programming</span></td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Nationality</td>
+                        <td>:</td>
+                        <td class="badge badge-success">Indian</td>
+                    </tr>
+                    <tr>
+                        <td class="badge badge-info">Social Media</td>
+                        <td>:</td>
+                        <td><a href="https://www.instagram.com/suriyajeyasuriya/" target="_blank"><img width="30" class="rounded-circle"src="{% static 'instagram.jpg' %}" />
+                            <span class="text-success" style="font-size:16px">Instagram</span></a>
+                            <a href="https://mail.google.com/mail/suriyajeyasuriya123@gmail.com" target="_blank"><img width="30" src="{% static 'gmail.png' %}" />
+                            <span class="text-dark" style="font-size:16px">Gmail</span></a>
+                            <a href="https://www.linkedin.com/in/jeyasuriya-m-4a3a861b1/" target="_blank"><img width="30" src="{% static 'linkedin.png' %}" />
+                            <span class="text-danger" style="font-size:16px">linkedin</span></a>
+                            <a href="https://github.com/Jeyasuriya1998" target="_blank"><img width="40" src="{% static 'github.png' %}" />
+                            <span class="text-info" style="font-size:16px">Github</span></a>
+                            <a href="https://twitter.com/Jeyasur61591515" target="_blank"><img width="40" class="rounded-circle" src="{% static 'twitter.png' %}" />
+                            <span class="text-hard" style="font-size:16px">twitter</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+        <br>
+        <div class="card" >
+            <h1 style="text-align:center; background-color:gray"><a href="{% url 'contact_me' %}"><span class="badge badge-pill badge-warning" style="font-color:red">To Get Me In Touch Press Here</span></a></h1>
+        </div>
+    </div>
+</div>
+{% endblock %}

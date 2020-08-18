@@ -1,0 +1,18 @@
+
+.btn{
+	width: 130px; height: 40px;
+	background: gray; color: red;
+	
+	font-size: 1.1rem; font-weight: 700;
+	
+}
+
+.btn:hover{
+	background-color: blue;
+}
+
+.s2{
+	background-color: var(--secondaryColor);
+	border-bottom:1px solid var(--borderColor);
+	overflow:auto;
+}
