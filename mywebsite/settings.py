@@ -23,14 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#88z!9lqu0_20@v-bb^7ea2-7u5f%3=80w=h291mm*ngeh6dbr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Flase
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['suriyawebsite.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,6 +128,7 @@ STATICFILES_DIRS =[
     ] 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
