@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#88z!9lqu0_20@v-bb^7ea2-7u5f%3=80w=h291mm*ngeh6dbr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = Flase
+DEBUG = False
 
 ALLOWED_HOSTS = ['suriyawebsite.herokuapp.com', '127.0.0.1']
 
